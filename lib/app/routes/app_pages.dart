@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:project_akhir/app/modules/ekspedisi/bindings/ekspedisi_binding.dart';
+import 'package:project_akhir/app/modules/ekspedisi/views/ekspedisi_view.dart';
 import 'package:project_akhir/app/modules/home/bindings/home_binding.dart';
 import 'package:project_akhir/app/modules/home/views/home_view.dart';
 import 'package:project_akhir/app/modules/login/bindings/login_binding.dart';
@@ -22,6 +24,11 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.EKSPEDISI,
+      page: () => EkspedisiView(),
+      binding: EkspedisiBinding(),
     ),
   ];
 }
