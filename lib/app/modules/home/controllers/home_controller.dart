@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:faker_dart/faker_dart.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +15,7 @@ class HomeController extends GetxController {
         "id": index + 1,
         "name": faker.commerce.productName(),
         "price": faker.commerce.price(symbol: "Rp ", decimals: 2, min: 10000, max: 5000000),
+        "weight": 100 + Random().nextInt(25000),
       },
     );
     super.onInit();

@@ -6,6 +6,8 @@ import 'package:project_akhir/app/modules/home/bindings/home_binding.dart';
 import 'package:project_akhir/app/modules/home/views/home_view.dart';
 import 'package:project_akhir/app/modules/login/bindings/login_binding.dart';
 import 'package:project_akhir/app/modules/login/views/login_view.dart';
+import 'package:project_akhir/app/modules/ongkir/bindings/ongkir_binding.dart';
+import 'package:project_akhir/app/modules/ongkir/views/ongkir_view.dart';
 
 part 'app_routes.dart';
 
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.EKSPEDISI,
       page: () => EkspedisiView(),
       binding: EkspedisiBinding(),
+    ),
+    GetPage(
+      name: _Paths.ONGKIR,
+      page: () => OngkirView(),
+      binding: OngkirBinding(),
     ),
   ];
 }
