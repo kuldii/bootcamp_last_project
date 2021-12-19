@@ -14,7 +14,7 @@ class EkspedisiController extends GetxController {
 
   TextEditingController jumlahC = TextEditingController(text: "1");
 
-  void cekOngkir(int weight) async {
+  void cekOngkir(Map<String, dynamic> product, int weight) async {
     if (idProvinceAsal != 0 && idProvinceTujuan != 0 && idCityAsal != 0 && idCityTujuan != 0 && codeCourier.isNotEmpty && jumlahC.text.isNotEmpty) {
       // Memenuhi
       // origin : idCityAsal
@@ -46,7 +46,18 @@ class EkspedisiController extends GetxController {
             duration: Duration(milliseconds: 2000),
           );
         } else {
-          Get.toNamed(Routes.ONGKIR, arguments: body);
+          Get.toNamed(
+            Routes.ONGKIR,
+            arguments: {
+              "product": {
+                "name": product["name"],
+                "total_price": product["price"] * int.parse(jumlahC.text),
+                "total_weight": product["weight"] * int.parse(jumlahC.text),
+                "jumlah": int.parse(jumlahC.text),
+              },
+              "ongkir": body,
+            },
+          );
         }
       } catch (e) {
         print(e);

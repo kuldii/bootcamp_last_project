@@ -51,7 +51,7 @@ class EkspedisiView extends GetView<EkspedisiController> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text("${product["price"]}"),
+                  Text("Rp ${product["price"]}"),
                   SizedBox(height: 5),
                   Text(
                     "Berat Produk",
@@ -312,6 +312,7 @@ class EkspedisiView extends GetView<EkspedisiController> {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () => controller.cekOngkir(
+              product,
               (product["weight"] as int) * int.parse(controller.jumlahC.text),
             ),
             child: Text("CEK ONGKOS KIRIM"),

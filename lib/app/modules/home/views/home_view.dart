@@ -34,7 +34,7 @@ class HomeView extends GetView<HomeController> {
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("${controller.products[index]["price"]}"),
+              Text("Rp ${controller.products[index]["price"]}"),
               Text("${controller.products[index]["weight"]} gram"),
             ],
           ),
