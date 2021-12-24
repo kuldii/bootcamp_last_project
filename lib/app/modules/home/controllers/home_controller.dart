@@ -15,7 +15,7 @@ class HomeController extends GetxController {
         "id": index + 1,
         "name": faker.commerce.productName(),
         "price": 10000 + Random().nextInt(1000000),
-        "weight": 100 + Random().nextInt(25000),
+        "weight": 1 + Random().nextInt(25000),
       },
     );
     super.onInit();
